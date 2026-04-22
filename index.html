@@ -1602,9 +1602,88 @@
       #app { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
       .topnav { padding-top: max(18px, env(safe-area-inset-top, 18px)); }
     }
+
+    /* ============================
+       SPLASH / OPENING ANIMATION
+    ============================ */
+    #splash {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--bg);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 16px;
+      pointer-events: none;
+      animation: splashOut 0.5s ease 1.4s both;
+    }
+    @keyframes splashOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .splash-logo {
+      display: flex; align-items: center; gap: 10px;
+      animation: splashLogoIn 0.55s cubic-bezier(0.16,1,0.3,1) 0.1s both;
+    }
+    @keyframes splashLogoIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .splash-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .splash-icon svg { width: 28px; height: 28px; }
+
+    .splash-wordmark {
+      font-family: var(--font-headline);
+      font-size: 28px; font-weight: 400;
+      color: var(--text); letter-spacing: -0.5px;
+    }
+
+    .splash-tagline {
+      font-size: 13px; color: var(--text3);
+      font-family: var(--font-display);
+      letter-spacing: 0.02em;
+      animation: splashLogoIn 0.55s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+    }
+
+    .splash-bar-track {
+      width: 120px; height: 2px;
+      background: var(--surface2); border-radius: 100px;
+      overflow: hidden;
+      animation: splashLogoIn 0.4s ease 0.5s both;
+    }
+    .splash-bar-fill {
+      height: 100%; background: var(--green); border-radius: 100px;
+      width: 0%;
+      animation: splashBarGrow 0.8s cubic-bezier(0.4,0,0.2,1) 0.55s both;
+    }
+    @keyframes splashBarGrow {
+      from { width: 0%; }
+      to   { width: 100%; }
+    }
+
   </style>
 </head>
 <body>
+<div id="splash">
+  <div class="splash-logo">
+    <div class="splash-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="23 4 23 10 17 10"/>
+        <polyline points="1 20 1 14 7 14"/>
+        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+      </svg>
+    </div>
+    <span class="splash-wordmark">RebootOS</span>
+  </div>
+  <div class="splash-tagline">Old devices deserve a second life.</div>
+  <div class="splash-bar-track">
+    <div class="splash-bar-fill"></div>
+  </div>
+</div>
+
 
 <!-- light theme: no ambient glows needed -->
 
