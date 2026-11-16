@@ -1,5 +1,5 @@
-const CACHE = 'rebootos-v2';
-const ASSETS = ['/', '/index.html'];
+const CACHE = 'rebootos-v3';
+const ASSETS = ['/', '/index.html', '/manifest.json', '/favicon.svg', '/icon-192.png', '/icon-512.png'];
 const FONT_CACHE = 'rebootos-fonts-v1';
 
 self.addEventListener('install', e => {

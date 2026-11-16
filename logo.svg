@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" fill="none">
+
+  <!-- ── App icon ── -->
+  <rect x="0" y="16" width="128" height="128" rx="30" fill="#1a4d1a"/>
+  <rect x="5" y="21" width="118" height="118" rx="26" fill="#2a7a2a"/>
+
+  <!-- Circular refresh arrows (two symmetrical arcs) -->
+  <!-- Top-right arc: clockwise from ~200° to ~340° -->
+  <path d="M 64 42
+           A 38 38 0 1 1 30 95"
+        stroke="white" stroke-width="8.5" stroke-linecap="round" fill="none"/>
+  <!-- Arrowhead pointing down-left on the top arc end -->
+  <path d="M 30 95 L 18 84 M 30 95 L 20 108"
+        stroke="white" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bottom-left arc: clockwise from ~20° to ~160° -->
+  <path d="M 64 118
+           A 38 38 0 1 1 99 65"
+        stroke="white" stroke-width="8.5" stroke-linecap="round" fill="none"/>
+  <!-- Arrowhead pointing up-right on the bottom arc end -->
+  <path d="M 99 65 L 111 76 M 99 65 L 110 52"
+        stroke="white" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ── Wordmark ── -->
+  <text x="152" y="104"
+        font-family="'Arial Black', 'Helvetica Neue', sans-serif"
+        font-size="64" font-weight="900"
+        fill="#111111" letter-spacing="-2">Reboot<tspan fill="#2a7a2a">OS</tspan></text>
+
+  <!-- ── Tagline ── -->
+  <text x="154" y="130"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="14.5" fill="#999999" letter-spacing="0.4">
+    Old devices deserve a second life.
+  </text>
+
+</svg>
