@@ -1,4 +1,4 @@
-const CACHE = 'rebootos-v3';
+const CACHE = 'rebootos-v4';
 const ASSETS = ['/', '/index.html', '/manifest.json', '/favicon.svg', '/icon-192.png', '/icon-512.png'];
 const FONT_CACHE = 'rebootos-fonts-v1';
 
